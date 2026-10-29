@@ -1,34 +1,38 @@
 # Algorithmic Lab
 
-A curated, tested collection of data structures, algorithms, competitive programming techniques, and coding exercises in **Python** and **C++17**.
+A curated, tested collection of data structures, algorithms, competitive programming techniques, and coding exercises in **Python 3**.
 
 > Correctness first. Each implementation should explain its contract, complexity, and edge cases, and have automated tests.
 
 ## Implemented algorithms
 
-| Topic | Algorithm | Python | C++ |
-| --- | --- | --- | --- |
-| Arrays | Two Sum | Yes | Yes |
-| Arrays | Maximum Subarray (Kadane) | Yes | Yes |
-| Search | Lower Bound | Yes | Yes |
-| Graphs | BFS shortest paths (unweighted) | Yes | Planned |
+| Topic | Algorithm | Python |
+| --- | --- | --- |
+| Arrays | Two Sum | Yes |
+| Arrays | Maximum Subarray (Kadane) | Yes |
+| Search | Lower Bound | Yes |
+| Graphs | BFS shortest paths (unweighted) | Yes |
 
 ## Run tests
 
-**Python 3.10+:**
+Requires Python 3.10+.
+
+On macOS or Linux:
 
 ```bash
 PYTHONPATH=python python -m unittest discover -s tests -v
 ```
 
-**C++17 (GCC/Clang):**
+On Windows PowerShell:
 
-```bash
-g++ -std=c++17 -Wall -Wextra -Werror -pedantic -Icpp/include cpp/tests/test_algorithms.cpp -o algolab-tests
-./algolab-tests
+```powershell
+$env:PYTHONPATH='python'
+py -3 -m unittest discover -s tests -v
 ```
 
-On Windows PowerShell, use `$env:PYTHONPATH='python'; py -3 -m unittest discover -s tests -v` for Python. For C++, use a C++17-capable compiler or GitHub Actions.
+## Daily LeetCode practice
+
+Solve a problem yourself, submit it on LeetCode, then add your own accepted Python solution with its approach, time/space complexity, and edge-case tests. Start with Easy problems and gradually introduce Medium problems.
 
 ## Contributing
 

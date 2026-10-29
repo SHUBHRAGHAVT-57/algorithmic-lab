@@ -4,7 +4,4 @@ __pycache__/
 .venv/
 .vscode/
 .idea/
-*.exe
-*.o
-algolab-tests
 .DS_Store
