@@ -42,6 +42,7 @@ class ReferenceAlgorithmsTest(unittest.TestCase):
         largest = self.require("k_largest")
         self.assertEqual(largest([4, -1, 4, 2], 3), [4, 4, 2])
         self.assertEqual(largest([2, -3], 8), [2, -3])
+        self.assertEqual(largest(iter([2, -3]), 10**30), [2, -3])
         self.assertEqual(largest([], 2), [])
         self.assertEqual(largest([5], 0), [])
 
@@ -177,4 +178,3 @@ class ReferenceAlgorithmsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
