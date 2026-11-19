@@ -14,6 +14,15 @@ class AlgorithmsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             maximum_subarray([])
 
+    def test_maximum_subarray_does_not_copy_the_input(self):
+        class NoSliceList(list):
+            def __getitem__(self, index):
+                if isinstance(index, slice):
+                    raise AssertionError("maximum_subarray must use constant extra space")
+                return super().__getitem__(index)
+
+        self.assertEqual(maximum_subarray(NoSliceList([3, -7, 2, 3])), 5)
+
     def test_lower_bound(self):
         self.assertEqual(lower_bound([1, 2, 2, 4], 2), 1)
         self.assertEqual(lower_bound([1, 2, 2, 4], 3), 3)
