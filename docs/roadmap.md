@@ -1,8 +1,7 @@
 # Roadmap
 
-- Phase 1: Arrays, binary search, and graph traversal with tests.
-- Phase 2: Stacks, queues, linked lists, trees, heaps, and disjoint-set union.
-- Phase 3: Dynamic programming, greedy techniques, shortest paths, and range queries.
-- Phase 4: Competitive-programming templates, benchmark suites, and a searchable problem index.
+The catalog covers arrays, binary search, unweighted and weighted graphs, binary trees, heaps, intervals, and string dynamic programming. [Implemented algorithms](../README.md#implemented-algorithms)
 
-Every new algorithm must ship with tests and complexity documentation.
+Potential additions include dedicated stack and queue examples, linked lists, disjoint-set union, greedy algorithms, and range queries. Competitive-programming templates, benchmarks, a problem index, and C++ examples are longer-term ideas.
+
+Finish each reference with an input contract, complexity documentation, and deterministic tests before starting the next topic.

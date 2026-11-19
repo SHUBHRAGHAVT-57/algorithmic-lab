@@ -15,8 +15,9 @@ def maximum_subarray(nums: list[int]) -> int:
     """Return maximum nonempty contiguous sum. O(n) time, O(1) space."""
     if not nums:
         raise ValueError("maximum_subarray requires a nonempty sequence")
-    best = current = nums[0]
-    for value in nums[1:]:
+    values = iter(nums)
+    best = current = next(values)
+    for value in values:
         current = max(value, current + value)
         best = max(best, current)
     return best
